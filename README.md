@@ -1,5 +1,9 @@
 这是一个基于Next.js和通义千问全模态大模型的聊天应用，支持图片、音频和视频的处理。#已添加deepseek以增强文本能力
 
+### ！！！
+### 尚处于早期开发阶段，会出现很多奇奇怪怪的事情。
+
+
 ## 功能特点
 
 - 支持文本消息
@@ -14,7 +18,7 @@
 - **Node.js**: 推荐 v18.x 或更高版本
 - **浏览器**: 最新版的 Chrome、Firefox、Safari 或 Edge (支持MediaRecorder API)
 - **摄像头和麦克风**: 用于视频录制功能
-- **API密钥**: 通义千问API密钥
+- **API密钥**: 通义千问API密钥，deepseek-api密钥。
 
 ## 快速开始
 
@@ -27,11 +31,14 @@ npm install
 ### 配置环境变量
 
 
-1. 在`.env.local`中填入您的通义千问与deepseek API密钥
-
+1. 创建`.env.local`进行以下设置
 
 ```
+# DeepSeek模型设置
+DEEPSEEK_CHAT_MODEL=deepseek-chat   #用作标题总结
+DEEPSEEK_REASONER_MODEL=deepseek-reasoner   #弥补Qwen语言方面的不足
 DASHSCOPE_API_KEY=您的API密钥
+USE_DEEPSEEK_FOR_ANALYSIS=true  #使用deepseek-r1处理Qwen返回的多媒体内容解读
 ```
 
 ### 启动开发服务器
@@ -61,6 +68,7 @@ npm run dev
    - 如果视频上传失败，请尝试录制更短的视频或降低环境光线
    - 首次使用时需要授予摄像头和麦克风权限
    - 某些企业网络可能会阻止摄像头访问
+
 
 ## API使用方法
 
