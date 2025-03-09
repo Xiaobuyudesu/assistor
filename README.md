@@ -34,11 +34,12 @@ npm install
 1. 创建`.env.local`进行以下设置
 
 ```
-# DeepSeek模型设置
 DEEPSEEK_CHAT_MODEL=deepseek-chat   #用作标题总结
 DEEPSEEK_REASONER_MODEL=deepseek-reasoner   #弥补Qwen语言方面的不足
+DEEPSEEK_API_KEY=您的API密钥
 DASHSCOPE_API_KEY=您的API密钥
 USE_DEEPSEEK_FOR_ANALYSIS=true  #使用deepseek-r1处理Qwen返回的多媒体内容解读
+
 ```
 
 ### 启动开发服务器
